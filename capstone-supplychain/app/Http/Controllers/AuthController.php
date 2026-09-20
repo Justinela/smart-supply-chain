@@ -24,15 +24,27 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function showRegister()
+      public function showRegister()
     {
         if (Auth::check()) {
             return redirect()->route('dashboard');
         }
         $roles = Role::all();
+        if ($roles->isEmpty()) {
+            try {
+                \Illuminate\Support\Facades\Artisan::call('db:seed', ['--force' => true]);
+                $roles = Role::all();
+            } catch (\Throwable $e) {
+                $roles = collect([
+                    (object)['id' => 1, 'name' => 'admin', 'display_name' => 'Administrator'],
+                    (object)['id' => 2, 'name' => 'warehouse_staff', 'display_name' => 'Warehouse Staff'],
+                    (object)['id' => 3, 'name' => 'procurement_staff', 'display_name' => 'Procurement Staff'],
+                    (object)['id' => 4, 'name' => 'management', 'display_name' => 'Executive Manager'],
+                ]);
+            }
+        }
         return view('auth.register', compact('roles'));
     }
-
     public function register(Request $request)
     {
         $request->validate([
