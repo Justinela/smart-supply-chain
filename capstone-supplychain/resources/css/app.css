@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    
+    --color-primary-50: #EFFAF7;
+    --color-primary-100: #DBF3ED;
+    --color-primary-200: #B4E5DA;
+    --color-primary-300: #7FCFBE;
+    --color-primary-400: #3FB39B;
+    --color-primary-500: #17957F;
+    --color-primary-600: #0F7A68;
+    --color-primary-700: #0D6355;
+    --color-primary-800: #0A4D42;
+    --color-primary-900: #063831;
+    --color-primary-950: #04231F;
+
+    --color-accent-100: #FEF0D6;
+    --color-accent-300: #FAC978;
+    --color-accent-400: #F5AC3D;
+    --color-accent-500: #E8940F;
+    --color-accent-600: #C2760B;
+    --color-accent-700: #9A5B08;
+
+    --color-neutral-50: #F7FAF9;
+    --color-neutral-100: #F0F4F2;
+    --color-neutral-200: #E2E8E5;
+    --color-neutral-300: #C9D2CD;
+    --color-neutral-400: #A3AFA9;
+    --color-neutral-500: #7B8A84;
+    --color-neutral-600: #5A6B64;
+    --color-neutral-700: #3A4A44;
+    --color-neutral-800: #24322D;
+    --color-neutral-900: #16211D;
+    --color-neutral-950: #0E1512;
+}
+
+:root {
+    /* Ledger Design System Tokens */
+    --primary-50: #EFFAF7;  --primary-100: #DBF3ED; --primary-200: #B4E5DA;
+    --primary-300: #7FCFBE; --primary-400: #3FB39B; --primary-500: #17957F;
+    --primary-600: #0F7A68; --primary-700: #0D6355; --primary-800: #0A4D42;
+    --primary-900: #063831; --primary-950: #04231F;
+
+    --accent-100: #FEF0D6; --accent-300: #FAC978; --accent-400: #F5AC3D;
+    --accent-500: #E8940F; --accent-600: #C2760B; --accent-700: #9A5B08;
+
+    --neutral-50: #F7FAF9;  --neutral-100: #F0F4F2; --neutral-200: #E2E8E5;
+    --neutral-300: #C9D2CD; --neutral-400: #A3AFA9; --neutral-500: #7B8A84;
+    --neutral-600: #5A6B64; --neutral-700: #3A4A44; --neutral-800: #24322D;
+    --neutral-900: #16211D; --neutral-950: #0E1512;
+
+    --success: #14804A; --warning: #B54708; --danger: #B42318; --info: #1570EF;
+
+    --shadow-card: 0 1px 2px rgba(14,21,18,.04), 0 1px 3px rgba(14,21,18,.06);
+    --shadow-flyout: 0 10px 15px -3px rgba(14,21,18,.10), 0 4px 6px -4px rgba(14,21,18,.10);
+}
+
+.tnum { font-variant-numeric: tabular-nums; }
+
